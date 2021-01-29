@@ -19,7 +19,5 @@ before_deploy:
 deploy:
   provider: pypi
   user: __token__
-  password: $pypi_token
-  on:
-    tags: true
+  password: err
   skip_cleanup: true
