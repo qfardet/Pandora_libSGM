@@ -22,6 +22,7 @@ comment:
 ignore:
   - "test"
   - "test/**/*"
-  - "test_*.rb"
+  - "**/test/**/*"
   - "/usr/**/*"
   - "**/*.h" 
+  - "**/*.cpp"
