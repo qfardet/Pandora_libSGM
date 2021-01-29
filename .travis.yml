@@ -1,12 +1,12 @@
 language: cpp
 compiler: gcc
-before_install:
-- sudo apt-get update
-- sudo apt-get install python3
+#before_install:
+#- sudo apt-get update
+#- sudo apt-get install python3
 script: 
   - cd ${TRAVIS_BUILD_DIR}
-  - python --version
-  - which pip
+  - which python3
+  - which pip3
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
