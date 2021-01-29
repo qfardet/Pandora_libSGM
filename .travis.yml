@@ -9,6 +9,7 @@ before_install:
 script: 
   - cd ${TRAVIS_BUILD_DIR}
   - make tests
+  - ls -l
   - gcovr -r . -e ".*\.h" -e ".*usr/include/.*" -e ".*test[_-|A-Z|a-z]*\.cpp" --object-directory=`pwd` > gcov-report.xml
 after_success:
   - codecov
