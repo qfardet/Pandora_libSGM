@@ -3,8 +3,7 @@ compiler: gcc
 dist: bionic
 script: 
   - cd ${TRAVIS_BUILD_DIR}
-  - which python3
-  - which python
+  - python --version
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
