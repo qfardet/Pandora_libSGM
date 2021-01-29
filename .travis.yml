@@ -1,6 +1,9 @@
 language: cpp
 compiler: gcc
-dist: bionic
+dist: focal
+before_install:
+  - apt install python-is-python3
+  - apt install python3-pip
 script: 
   - cd ${TRAVIS_BUILD_DIR}
   - python --version
