@@ -21,3 +21,5 @@ deploy:
   user: __token__
   password: err
   skip_cleanup: true
+  on:
+    branch: test_travis
