@@ -7,9 +7,10 @@ before_install:
   - pip install numpy
 script: 
   - cd ${TRAVIS_BUILD_DIR}
-  - python --version
-
+  - make tests
+  - gcov -r . --object-directory=`pwd` > gcov-report.xml
 after_success:
+  - codecov
   - bash <(curl -s https://codecov.io/bash)
 before_deploy:
 - echo 'update version according to the tag name'
