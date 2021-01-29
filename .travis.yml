@@ -8,7 +8,7 @@ before_install:
 script: 
   - cd ${TRAVIS_BUILD_DIR}
   - make tests
-  - gcov -r . --object-directory=`pwd` > gcov-report.xml
+  - gcov -r . -e ".*test/*" --object-directory=`pwd` > gcov-report.xml
 after_success:
   - codecov
   - bash <(curl -s https://codecov.io/bash)
