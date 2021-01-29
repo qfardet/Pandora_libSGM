@@ -1,12 +1,10 @@
 language: cpp
 compiler: gcc
-#before_install:
-#- sudo apt-get update
-#- sudo apt-get install python3
+dist: bionic
 script: 
   - cd ${TRAVIS_BUILD_DIR}
   - which python3
-  - which pip3
+  - which python
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
